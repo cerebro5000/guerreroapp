@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Guerreroapp</string>
+    <string name="usuario">Nombre</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="entrar">Ingresar</string>
+    <string name="registrar">Registrate</string>
 </resources>

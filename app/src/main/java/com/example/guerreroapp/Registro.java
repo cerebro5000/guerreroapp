@@ -34,11 +34,11 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        edtnom = (EditText) findViewById(R.id.edtnombre);
-        edtape = (EditText) findViewById(R.id.edtape);
-        edtcta = (EditText) findViewById(R.id.edtcta);
-        edtpass1 = (EditText) findViewById(R.id.edtpass1);
-        edtpass2 = (EditText) findViewById(R.id.edtpass2);
+        edtnom =  findViewById(R.id.edtnombre);
+        edtape =  findViewById(R.id.edtape);
+        edtcta =  findViewById(R.id.edtcta);
+        edtpass1 =  findViewById(R.id.edtpass1);
+        edtpass2 =  findViewById(R.id.edtpass2);
     }
 
     public void guardar(View view) {
@@ -51,10 +51,10 @@ public class Registro extends AppCompatActivity {
             editor.putString("apellido", edtape.getText().toString());
             editor.putString("cuenta", edtcta.getText().toString());
             editor.putString("contraseña", edtpass1.getText().toString());
-            Intent i = new Intent(this, MainActivity.class);
-            Toast toast = Toast.makeText(this, R.string.creadacta, Toast.LENGTH_SHORT);
+            editor.commit();
+            Toast toast = Toast.makeText(this, R.string.creadacta, Toast.LENGTH_LONG);
             toast.show();
-            startActivity(i);
+            finish();
 
         }
         else{

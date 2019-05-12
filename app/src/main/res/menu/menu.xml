@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/inicio" android:title="@string/inicio" android:icon="@drawable/ic_home_black_24dp"/>
-    <item android:id="@+id/res" android:title="@string/res" android:icon="@drawable/ic_restaurant_black_24dp"/>
-    <item android:id="@+id/hotel" android:title="@string/hotel" android:icon="@drawable/ic_hotel_black_24dp"/>
-    <item android:id="@+id/lugares" android:title="@string/lugares" android:icon="@drawable/ic_location_on_black_24dp"/>
-    <item android:id="@+id/salir" android:title="@string/logout" android:icon="@drawable/ic_person_outline_black_24dp"/>
-</menu>

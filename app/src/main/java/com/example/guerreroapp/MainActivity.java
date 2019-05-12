@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
 
         if( preferences.getInt("autenticado", 0) == 1){
-            Intent i = new Intent(this , menu.class);
+            Intent i = new Intent(this , menuprincipal.class);
             startActivity(i);
             finish();
         }
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putInt("autenticado", 1);
                 editor.commit();
-                Intent i = new Intent(this, menu.class);
+                Intent i = new Intent(this, menuprincipal.class);
                 startActivity(i);
                 finish();
             }

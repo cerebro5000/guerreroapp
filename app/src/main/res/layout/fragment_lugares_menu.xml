@@ -5,13 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".fragments.inicio_menu">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/lugares"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+        android:id="@+id/recyclerlugares">
+
+    </android.support.v7.widget.RecyclerView>
 
 </FrameLayout>

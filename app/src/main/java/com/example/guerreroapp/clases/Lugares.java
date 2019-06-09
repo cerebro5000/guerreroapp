@@ -13,7 +13,7 @@ public class Lugares {
         this.imagen = imagen;
     }
 
-    public Lugares(String nombre, double locationx, double locationy, String descriptcion, int imagen) {
+    public Lugares(String nombre, String descriptcion, int imagen , double locationx, double locationy) {
         this.nombre = nombre;
         this.locationx = locationx;
         this.locationy = locationy;

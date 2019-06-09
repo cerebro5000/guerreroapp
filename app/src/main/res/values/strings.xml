@@ -34,5 +34,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Configuracion</string>
     <string name="action_logout">Salir</string>
+    <string name="title_activity_maps_lugares">MapLugares</string>
 
 </resources>

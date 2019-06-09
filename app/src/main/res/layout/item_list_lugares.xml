@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
 
         android:orientation="horizontal"
+        android:id="@+id/envetoslugares"
         >
         <ImageView
             android:id="@+id/idimagen"

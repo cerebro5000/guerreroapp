@@ -31,18 +31,24 @@ public class lugares_menu extends Fragment {
         lugares = new ArrayList<Lugares>();
         llenarlugares(lugares);
 
-        View v = inflater.inflate(R.layout.fragment_lugares_menu, container,false);
+        final View v = inflater.inflate(R.layout.fragment_lugares_menu, container,false);
         reclicler = v.findViewById(R.id.recyclerlugares);
         reclicler.setLayoutManager(new LinearLayoutManager(getContext()));
         Lugaresadapter adapter = new Lugaresadapter(lugares);
         reclicler.setLayoutManager(new LinearLayoutManager(getContext()));
         reclicler.setAdapter(adapter);
+        reclicler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         return v;
     }
 
     private void llenarlugares(ArrayList<Lugares> lugares) {
-        lugares.add(new Lugares("Casa de Piedra", "casa de piedra playa bonita", R.drawable.casa_de_piedra));
-        lugares.add(new Lugares("Playa Ventura","playa ventura",R.drawable.playa_ventura));
+        lugares.add(new Lugares("Casa de Piedra", "casa de piedra playa bonita", R.drawable.casa_de_piedra, 16.5361107, -98.899232));
+        lugares.add(new Lugares("Playa Ventura","playa ventura",R.drawable.playa_ventura, 16.546200, -98.932295));
 
     }
 }

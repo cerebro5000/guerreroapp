@@ -6,6 +6,22 @@ public class Restaurantes {
     private String nomnbre;
     private String direccion;
     private int telefono;
+    private int imagenres;
+
+    public Restaurantes(String nomnbre, String direccion, int telefono, int imagenres) {
+        this.nomnbre = nomnbre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.imagenres = imagenres;
+    }
+
+    public int getImagenres() {
+        return imagenres;
+    }
+
+    public void setImagenres(int imagenres) {
+        this.imagenres = imagenres;
+    }
 
     public String getDireccion() {
         return direccion;

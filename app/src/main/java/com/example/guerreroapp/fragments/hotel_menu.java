@@ -35,6 +35,6 @@ public class hotel_menu extends Fragment {
         return view;
     }
     public void llenar(ArrayList hoteles){
-        hoteles.add(new Hoteles("Perla Negra","direccion", 33142157,R.drawable.playa_ventura)) ;
+        hoteles.add(new Hoteles("El Tulipan","direccion", 33142157,R.drawable.playa_ventura)) ;
     }
 }

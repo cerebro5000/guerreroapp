@@ -10,46 +10,48 @@ import android.widget.TextView;
 
 import com.example.guerreroapp.R;
 import com.example.guerreroapp.clases.Lugares;
+import com.example.guerreroapp.clases.Restaurantes;
 
 import java.util.ArrayList;
 
-public class Restaurantesadapter extends RecyclerView.Adapter<Restaurantesadapter.ViewHolderHolderLugares> {
+public class Restaurantesadapter extends RecyclerView.Adapter<Restaurantesadapter.ViewHolderHolderRestaurantes> {
 
-    ArrayList<Lugares> lugares;
+    ArrayList<Restaurantes> restaurante;
 
-    public Restaurantesadapter(ArrayList<Lugares> lugares) {
-        this.lugares = lugares;
+    public Restaurantesadapter(ArrayList<Restaurantes> restaurante) {
+        this.restaurante = restaurante;
     }
 
     @NonNull
     @Override
-    public ViewHolderHolderLugares onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+    public ViewHolderHolderRestaurantes onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_restaurantes, null,false);
-        return new ViewHolderHolderLugares(view);
+        return new ViewHolderHolderRestaurantes(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderHolderLugares holder, int i) {
-        holder.nombre.setText(lugares.get(i).getNombre());
-        holder.descaipcion.setText(lugares.get(i).getDescriptcion());
-        holder.imagen.setImageResource(lugares.get(i).getImagen());
+    public void onBindViewHolder(@NonNull ViewHolderHolderRestaurantes holder, int i) {
+        holder.nombre.setText(restaurante.get(i).getNomnbre());
+        holder.descripcion.setText(restaurante.get(i).getDireccion());
+        holder.imagen.setImageResource(restaurante.get(i).getImagenres());
 
     }
 
     @Override
     public int getItemCount() {
-        return this.lugares.size();
+        return this.restaurante.size();
     }
 
-    public class ViewHolderHolderLugares extends RecyclerView.ViewHolder {
+    public class ViewHolderHolderRestaurantes extends RecyclerView.ViewHolder {
         TextView nombre;
-        TextView descaipcion;
+        TextView descripcion;
         ImageView imagen;
-        public ViewHolderHolderLugares(@NonNull View itemView) {
+        public ViewHolderHolderRestaurantes(@NonNull View itemView) {
             super(itemView);
-            nombre = itemView.findViewById(R.id.textonombre);
-            descaipcion = itemView.findViewById(R.id.textodescripcion);
-            imagen = itemView.findViewById(R.id.idimagen);
+            nombre = itemView.findViewById(R.id.textonombrerestaurante);
+            descripcion = itemView.findViewById(R.id.textodescripcionrestaurante);
+            imagen = itemView.findViewById(R.id.idimagenrestaurante);
+
 
         }
     }

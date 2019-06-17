@@ -2,6 +2,7 @@ package com.example.guerreroapp;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,10 +14,21 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsLugaresActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    double x;
+    double y;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(getIntent().getExtras() == null){
+            Log.e("bunble", "vacio");
+        }
+        else {
+            x = getIntent().getExtras().getDouble("cordenadax");
+            y = getIntent().getExtras().getDouble("cordenaday");
+            Log.e("cordenada x", "" + x);
+            Log.e("cordenada y", "" + y);
+        }
         setContentView(R.layout.activity_maps_lugares);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -39,8 +51,14 @@ public class MapsLugaresActivity extends FragmentActivity implements OnMapReadyC
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
+        LatLng sydney = new LatLng(x,y);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

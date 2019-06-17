@@ -5,14 +5,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.example.guerreroapp.R;
-import com.example.guerreroapp.adaptadores.Hotelesadapter;
 import com.example.guerreroapp.adaptadores.Lugaresadapter;
 import com.example.guerreroapp.clases.Lugares;
 
@@ -35,14 +33,16 @@ public class lugares_menu extends Fragment {
         reclicler = v.findViewById(R.id.recyclerlugares);
         reclicler.setLayoutManager(new LinearLayoutManager(getContext()));
         Lugaresadapter adapter = new Lugaresadapter(lugares);
+        reclicler.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View view) {
+                                             Log.e("clic","clic al objeto"+ reclicler.getChildAdapterPosition(view));
+                                         }
+                                     }
+
+        );
         reclicler.setLayoutManager(new LinearLayoutManager(getContext()));
         reclicler.setAdapter(adapter);
-        reclicler.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
         return v;
     }
 

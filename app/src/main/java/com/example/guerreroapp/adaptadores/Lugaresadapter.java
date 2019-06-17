@@ -1,7 +1,10 @@
 package com.example.guerreroapp.adaptadores;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +18,8 @@ import com.example.guerreroapp.R;
 import com.example.guerreroapp.clases.Lugares;
 
 import java.util.ArrayList;
+
+import static android.support.v4.app.ActivityCompat.startActivityForResult;
 
 public class Lugaresadapter extends RecyclerView.Adapter<Lugaresadapter.ViewHolderHolderLugares> {
 
@@ -55,7 +60,7 @@ public class Lugaresadapter extends RecyclerView.Adapter<Lugaresadapter.ViewHold
             nombre = itemView.findViewById(R.id.textonombre);
             descaipcion = itemView.findViewById(R.id.textodescripcion);
             imagen = itemView.findViewById(R.id.idimagen);
-            vista = itemView.findViewById(R.id.envetoslugares);
+            vista = itemView.findViewById(R.id.evetoslugares);
             this.lugar = Lugar;
             vista.setOnClickListener(this);
         }
@@ -63,8 +68,10 @@ public class Lugaresadapter extends RecyclerView.Adapter<Lugaresadapter.ViewHold
         @Override
         public void onClick(View view) {
             Intent i = new Intent(view.getContext(), MapsLugaresActivity.class);
-            i.putExtra("cosdenadax", lugar.getLocationx());
-            i.putExtra("cordenaday", lugar.getLocationy());
+            Bundle bundle = new Bundle();
+            bundle.putDouble("cordenadax", lugar.getLocationx());
+            bundle.putDouble("cordenaday", lugar.getLocationy());
+            i.putExtras(bundle);
             view.getContext().startActivity(i);
         }
     }

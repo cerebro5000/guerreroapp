@@ -65,6 +65,9 @@ public class Hoteles {
     public int getTelefono() {
         return telefono;
     }
+    public String getTelefonocadena() {
+        return String.valueOf(telefono);
+    }
 
     public void setTelefono(int telefono) {
         this.telefono = telefono;

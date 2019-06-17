@@ -1,7 +1,39 @@
 <resources>
-    <string name="app_name">Guerreroapp</string>
-    <string name="usuario">Nombre</string>
+    <!-- cadenas usadas en los activitis-->
+    <string name="app_name">Guerrero app</string>
+    <string name="usuario">Usuario</string>
     <string name="contrasena">Contraseña</string>
+    <string name="recontrasena">Repita la Contraseña</string>
     <string name="entrar">Ingresar</string>
     <string name="registrar">Registrate</string>
+    <string name="nousuario">Usuario Erroneo</string>
+    <string name="nocontrasena">Contraseña Erronea</string>
+    <string name="email">E-mail</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="Crearcta">Crear Cuenta</string>
+    <string name="creadacta">Cuenta Creada</string>
+    <string name="vacio">Cuenta no Encontrada</string>
+
+    <!--cadenas usadas en el menu-->
+    <string name="inicio">Inicio</string>
+    <string name="res">Restaurantes</string>
+    <string name="hotel">Hoteles</string>
+    <string name="lugares">Lugares</string>
+    <string name="logout">Salir</string>
+    <string name="abrir">Abrir</string>
+    <string name="cerrar">Cerrar</string>
+
+    <!-- cadenas para la cabecera del menu-->
+    <string name="cabeceranombre">Abrir</string>
+    <string name="cabecerausuario">Cerrar</string>
+
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="action_logout">Salir</string>
+    <string name="title_activity_maps_lugares">MapLugares</string>
+
 </resources>
